@@ -10,7 +10,6 @@
             padding: 0;
             height: 100%;
             overflow: hidden;
-            background-color: #f8f9fa;
         }
         iframe {
             width: 100%;
@@ -18,39 +17,12 @@
             border: none;
             display: block;
         }
-        .error-message {
-            display: none;
-            text-align: center;
-            color: #d32f2f;
-            font-weight: bold;
-            padding: 20px;
-            background-color: #ffebee;
-            margin: 20px;
-            border-radius: 8px;
-        }
     </style>
 </head>
 <body>
-    <div id="error-message" class="error-message">
-        Failed to load content. Please check your internet connection or contact support.
-    </div>
     <iframe 
-        id="physics-iframe"
-        src="https://script.google.com/macros/s/AKfycbx11H1m_c910gzM1ooAgMYlsAfJ2wpj_8yG88-VrJ6rsnYkUzmmG9ktA7fRZeeMfOsw/exec"
-        sandbox="allow-scripts allow-same-origin allow-forms allow-top-navigation"
-        onload="handleIframeLoad()"
-        onerror="handleIframeError()">
+        src="https://script.google.com/macros/s/AKfycbzq_EuJD3l_gXluZlRxIY5hV1QamTmns9T8J3CD-ncCwtcBj7XE3ur3BWCPo0NKhQ3b/exec?embedded=true"
+        sandbox="allow-scripts allow-same-origin">
     </iframe>
-    <script>
-        function handleIframeLoad() {
-            console.log('Iframe loaded successfully');
-            document.getElementById('error-message').style.display = 'none';
-        }
-
-        function handleIframeError() {
-            console.error('Iframe failed to load');
-            document.getElementById('error-message').style.display = 'block';
-        }
-    </script>
 </body>
 </html>
